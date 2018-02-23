@@ -10,32 +10,30 @@
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="0px"
-        android:layout_weight="1"
-        >
+        android:layout_weight="1">
+
         <Button
-            android:layout_width="0px"
-            android:layout_weight="1"
-            android:layout_height="match_parent"
-            android:text=""
-            android:textSize="48sp"
             android:id="@+id/b00"
-            />
-        <Button
             android:layout_width="0px"
-            android:layout_weight="1"
             android:layout_height="match_parent"
-            android:text=""
-            android:textSize="48sp"
+            android:layout_weight="1"
+            android:textSize="48sp" />
+
+        <Button
             android:id="@+id/b01"
-            />
-        <Button
             android:layout_width="0px"
-            android:layout_weight="1"
             android:layout_height="match_parent"
+            android:layout_weight="1"
             android:text=""
-            android:textSize="48sp"
+            android:textSize="48sp" />
+
+        <Button
             android:id="@+id/b02"
-            />
+            android:layout_width="0px"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:text=""
+            android:textSize="48sp" />
     </LinearLayout>
     <LinearLayout
         android:layout_width="match_parent"

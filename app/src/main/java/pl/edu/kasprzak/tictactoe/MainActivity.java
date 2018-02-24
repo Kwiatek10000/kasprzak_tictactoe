@@ -24,4 +24,4 @@ public class MainActivity extends AppCompatActivity {
         board.setButton((Button)findViewById(R.id.b22), 2, 2);
     }
 }
-//Tutaj nie zmieniłem nic...
+//Tutaj nie zmieniłem nic.

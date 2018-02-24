@@ -32,14 +32,18 @@ public class Board {
                 //Spisuję stan planszy do zmiennej.
             }
         }
-        if (textonboard.length()==9) {
-            //Sprawdzam długość zmiennej ze stanem planszy. Jeśli jest równa 9 to znaczy, że wszystkie pola są zapełnione, a nie padła wygrana co oznacza remis.
-            Toast toast = Toast.makeText(this.activity.getApplicationContext(), "Gra zakończyła się remisem. Kliknij, aby rozpocząć nową grę.", Toast.LENGTH_LONG);
-            toast.show();
-            //Wyświetlenie komunikatu o remisie.
-            ButtonOnClick.gameended = true;
-            //Zmieniam zmienną, aby przekazać, że rozgrywka się zakończyła.
+        if (ButtonOnClick.gameended==false) {
+            //Warunek, który blokuje sprawdzenie remisu, gdy gra się już zakończyła.
+            if (textonboard.length()==9) {
+                //Sprawdzam długość zmiennej ze stanem planszy. Jeśli jest równa 9 to znaczy, że wszystkie pola są zapełnione, a nie padła wygrana co oznacza remis.
+                Toast toast = Toast.makeText(this.activity.getApplicationContext(), "Gra zakończyła się remisem. Kliknij, aby rozpocząć nową grę.", Toast.LENGTH_LONG);
+                toast.show();
+                //Wyświetlenie komunikatu o remisie.
+                ButtonOnClick.gameended = true;
+                //Zmieniam zmienną, aby przekazać, że rozgrywka się zakończyła.
+            }
         }
+
     }
     public void check(String what) {
         //Funkcja sprawdza czy padła wygrana dla podanego jako argument znaku.

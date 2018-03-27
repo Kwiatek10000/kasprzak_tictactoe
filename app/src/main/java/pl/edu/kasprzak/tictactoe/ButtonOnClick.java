@@ -1,39 +1,87 @@
 package pl.edu.kasprzak.tictactoe;
 
+import android.app.Activity;
+import android.os.SystemClock;
 import android.view.View;
 import android.widget.Button;
 
 public class ButtonOnClick implements View.OnClickListener {
+
     public static boolean gameended = false;
-    //Dodałem zmienną oznaczającą koniec gry i przypisuję jej wartość "false" co oznacza, że gra jeszcze trwa.
+    public static boolean isOMoveOnStart = false;
     public static boolean isOMove = false;
-    //Tutaj zmieniłem na "false", bo chcę, aby X zaczynał rozgrywkę.
     private Board board;
     private Button button;
-    public ButtonOnClick(Button button, Board board) {
+    private MainActivity activity;
+    private AI ai;
+
+    public ButtonOnClick(Button button, Board board, MainActivity activity, AI ai) {
         this.button = button;
         this.board = board;
+        this.activity = activity;
+        this.ai = ai;
     }
+
     @Override
     public void onClick(View view) {
         if (gameended==false) {
-            //Sprawdzam w warunku czy gra trwa.
             if (button.getText().length() == 0) {
-                if (isOMove) {
-                    button.setText("O");
+                if (!activity.singleplayer) {
+
+                    if (isOMove) {
+                        button.setText("O");
+                    } else {
+                        button.setText("X");
+                    }
+
+                    isOMove = !isOMove;
+
+                    if (isOMove) {
+                        board.who = "O";
+                    } else {
+                        board.who = "X";
+                    }
+
+                    board.iswin(false);
 
                 } else {
-                    button.setText("X");
+                    if (!isOMove) {
+                        button.setText("X");
+
+                        isOMove = !isOMove;
+
+                        if (isOMove) {
+                            board.who = "O";
+                        } else {
+                            board.who = "X";
+                        }
+
+                        board.iswin(false);
+
+                        if (!gameended) {
+                            try {
+                                Thread.sleep(500);
+                            } catch (InterruptedException e) {
+                                e.printStackTrace();
+                            }
+
+                            ai.aiMove();
+
+                            isOMove = !isOMove;
+
+                            if (isOMove) {
+                                board.who = "O";
+                            } else {
+                                board.who = "X";
+                            }
+
+                            board.iswin(false);
+                        }
+                    }
                 }
-                isOMove = !isOMove;
-                board.iswin();
-                //Wywołuję funkcję sprawdzającą czy pojawiła się wygrana.
             }
         } else {
             board.restart();
-            //Jeśli gra się zakończyła kliknięcie wywoła funkcję restartującą planszę.
         }
     }
 }
-
-

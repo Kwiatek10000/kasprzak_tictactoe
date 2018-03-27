@@ -1,0 +1,251 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0px"
+        android:layout_weight="10"
+        android:orientation="horizontal" >
+
+        <Button
+            android:id="@+id/b40"
+            android:layout_width="0px"
+            android:layout_height="match_parent"
+            android:layout_weight="3"
+            android:text="Ustawienia"
+            android:textSize="24sp" />
+
+        <Button
+            android:id="@+id/btnOK"
+            android:layout_width="0px"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:text="OK"
+            android:textSize="24sp" />
+    </LinearLayout>
+
+    <Space
+        android:layout_width="match_parent"
+        android:layout_height="0px"
+        android:layout_weight="1" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0px"
+        android:layout_weight="10"
+        android:orientation="horizontal" >
+
+        <LinearLayout
+            android:layout_width="0px"
+            android:layout_height="match_parent"
+            android:layout_weight="75"
+            android:orientation="vertical" >
+
+            <TextView
+                android:id="@+id/TextColorView"
+                android:layout_width="match_parent"
+                android:layout_height="0px"
+                android:layout_weight="1"
+                android:text="Kolor symboli na planszy" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="0px"
+                android:layout_weight="3"
+                android:orientation="horizontal" >
+
+                <Button
+                    android:id="@+id/btnBlackText"
+                    android:layout_width="0px"
+                    android:layout_height="match_parent"
+                    android:layout_weight="13"
+                    android:background="#000000" />
+
+                <Space
+                    android:layout_width="0px"
+                    android:layout_height="match_parent"
+                    android:layout_weight="2.5" />
+
+                <Button
+                    android:id="@+id/btnBlueText"
+                    android:layout_width="0px"
+                    android:layout_height="match_parent"
+                    android:layout_weight="13"
+                    android:background="#0000FF" />
+
+                <Space
+                    android:layout_width="0px"
+                    android:layout_height="match_parent"
+                    android:layout_weight="2.5" />
+
+                <Button
+                    android:id="@+id/btnGreenText"
+                    android:layout_width="0px"
+                    android:layout_height="match_parent"
+                    android:layout_weight="13"
+                    android:background="#00FF00" />
+
+                <Space
+                    android:layout_width="0px"
+                    android:layout_height="match_parent"
+                    android:layout_weight="2.5" />
+
+                <Button
+                    android:id="@+id/btnYellowText"
+                    android:layout_width="0px"
+                    android:layout_height="match_parent"
+                    android:layout_weight="13"
+                    android:background="#FFFF00" />
+
+                <Space
+                    android:layout_width="0px"
+                    android:layout_height="match_parent"
+                    android:layout_weight="2.5" />
+
+                <Button
+                    android:id="@+id/btnRedText"
+                    android:layout_width="0px"
+                    android:layout_height="match_parent"
+                    android:layout_weight="13"
+                    android:background="#FF0000" />
+            </LinearLayout>
+        </LinearLayout>
+
+        <Space
+            android:layout_width="0px"
+            android:layout_height="match_parent"
+            android:layout_weight="5" />
+
+        <LinearLayout
+            android:layout_width="0px"
+            android:layout_height="match_parent"
+            android:layout_weight="20"
+            android:orientation="vertical" >
+
+            <Button
+                android:id="@+id/btnPreviewText"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent" />
+        </LinearLayout>
+    </LinearLayout>
+
+    <Space
+        android:layout_width="match_parent"
+        android:layout_height="0px"
+        android:layout_weight="1" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0px"
+        android:layout_weight="10"
+        android:orientation="horizontal" >
+
+        <LinearLayout
+            android:layout_width="0px"
+            android:layout_height="match_parent"
+            android:layout_weight="75"
+            android:orientation="vertical" >
+
+            <TextView
+                android:id="@+id/TextWinView"
+                android:layout_width="match_parent"
+                android:layout_height="0px"
+                android:layout_weight="1"
+                android:text="Kolor wygranej trójki" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="0px"
+                android:layout_weight="3"
+                android:orientation="horizontal" >
+
+                <Button
+                    android:id="@+id/btnBlackWin"
+                    android:layout_width="0px"
+                    android:layout_height="match_parent"
+                    android:layout_weight="13"
+                    android:background="#000000" />
+
+                <Space
+                    android:layout_width="0px"
+                    android:layout_height="match_parent"
+                    android:layout_weight="2.5" />
+
+                <Button
+                    android:id="@+id/btnBlueWin"
+                    android:layout_width="0px"
+                    android:layout_height="match_parent"
+                    android:layout_weight="13"
+                    android:background="#0000FF" />
+
+                <Space
+                    android:layout_width="0px"
+                    android:layout_height="match_parent"
+                    android:layout_weight="2.5" />
+
+                <Button
+                    android:id="@+id/btnGreenWin"
+                    android:layout_width="0px"
+                    android:layout_height="match_parent"
+                    android:layout_weight="13"
+                    android:background="#00FF00" />
+
+                <Space
+                    android:layout_width="0px"
+                    android:layout_height="match_parent"
+                    android:layout_weight="2.5" />
+
+                <Button
+                    android:id="@+id/btnYellowWin"
+                    android:layout_width="0px"
+                    android:layout_height="match_parent"
+                    android:layout_weight="13"
+                    android:background="#FFFF00" />
+
+                <Space
+                    android:layout_width="0px"
+                    android:layout_height="match_parent"
+                    android:layout_weight="2.5" />
+
+                <Button
+                    android:id="@+id/btnRedWin"
+                    android:layout_width="0px"
+                    android:layout_height="match_parent"
+                    android:layout_weight="13"
+                    android:background="#FF0000" />
+            </LinearLayout>
+        </LinearLayout>
+
+        <Space
+            android:layout_width="0px"
+            android:layout_height="match_parent"
+            android:layout_weight="5" />
+
+        <LinearLayout
+            android:layout_width="0px"
+            android:layout_height="match_parent"
+            android:layout_weight="20"
+            android:orientation="vertical" >
+
+            <Button
+                android:id="@+id/btnPreviewWin"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent" />
+        </LinearLayout>
+    </LinearLayout>
+
+    <Space
+        android:layout_width="match_parent"
+        android:layout_height="0px"
+        android:layout_weight="1" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0px"
+        android:layout_weight="37"
+        android:orientation="horizontal" >
+    </LinearLayout>
+</LinearLayout>
